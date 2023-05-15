@@ -1,0 +1,75 @@
+.todoItem {
+  display: flex;
+  word-break: break-word;
+  background-color: #041955;
+  margin: 10px auto;
+  padding: 20px 15px;
+  border-radius: 20px;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.2s;
+
+  .checkIcon {
+    min-width: 30px;
+    height: 30px;
+    fill: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 50%;
+    border: 3px solid #237bff;
+  }
+
+  .checked {
+    fill: rgb(255, 255, 255);
+    background-color: #237bff;
+  }
+
+  .text {
+    padding: 3px;
+    width: 100%;
+    margin-left: 10px;
+    position: relative;
+    width: fit-content;
+    transition: 0.2s;
+  }
+
+  .delBtn {
+    box-sizing: content-box;
+    margin-left: auto;
+    width: 30px;
+    cursor: pointer;
+    stroke: rgb(223, 65, 65);
+    border-radius: 10px;
+
+    &:hover {
+      stroke: rgb(172, 49, 49);
+    }
+  }
+}
+
+.completed {
+  background-color: #041a5588;
+
+}
+
+.completedText::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  animation: lineThroughIn 1s;
+}
+
+@keyframes lineThroughIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
