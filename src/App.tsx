@@ -1,9 +1,8 @@
 import TodoList from './components/TodoList';
-import "./app.css"
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{fontFamily: "sans-serif"}}>
       <TodoList />
     </div>
   );
